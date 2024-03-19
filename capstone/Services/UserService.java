@@ -114,6 +114,7 @@ public boolean upgradeToPrime(String id){
                 }
 
                 if (user.getBalance() >= 10){
+                    user.setBalance(user.getBalance() - 10);
                     user.setIsPrime(true);
                     return true;
                 }
