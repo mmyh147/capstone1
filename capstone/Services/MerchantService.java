@@ -22,6 +22,7 @@ public class MerchantService {
             if(merchant.getId().equals(newMerchant.getId)){
                 return;
             }
+        }
         merchants.add(merchant);
 
     }
