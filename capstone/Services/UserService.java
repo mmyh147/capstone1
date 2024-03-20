@@ -19,8 +19,14 @@ public class UserService {
         return userList;
     }
 
-    public void addUser(User user) {
+    public void addUser(User newUser) {
 
+        for (User user : userList) {
+            if(user.getId().equals(newUser.getId())){
+                return;
+            }
+
+        }
         userList.add(user);
 
     }
