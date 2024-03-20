@@ -20,8 +20,13 @@ public class MovieService {
         return movies;
     }
 
-    public void addMovie(Movie movie) {
+    public void addMovie(Movie newMovie) {
 
+        for (Movie movie : movies) {
+            if(movie.getId().equals(newMovie.getId())){
+                return;
+            }
+        }
         movies.add(movie);
 
     }
