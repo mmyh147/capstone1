@@ -16,8 +16,14 @@ public class ProductService {
         return productList;
     }
 
-    public void addProduct(Product product) {
+    public void addProduct(Product newProduct) {
 
+        for (Product product : productList) {
+            if(product.getId().equals(newProduct.getId())){
+                return;
+            }
+
+        }
         productList.add(product);
 
     }
