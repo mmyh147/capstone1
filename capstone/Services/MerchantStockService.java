@@ -22,6 +22,7 @@ public class MerchantStockService {
             if(merchant.getId().equals(newMerchant.getId())){
                 return;
             }
+        }
         merchantStocks.add(merchant);
 
     }
