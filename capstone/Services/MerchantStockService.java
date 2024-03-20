@@ -16,8 +16,12 @@ public class MerchantStockService {
         return merchantStocks;
     }
 
-    public void addMerchantStock(MerchantStock merchant) {
+    public void addMerchantStock(MerchantStock newMerchant) {
 
+        for (MerchantStock merchant : merchantStocks) {
+            if(merchant.getId().equals(newMerchant.getId())){
+                return;
+            }
         merchantStocks.add(merchant);
 
     }
