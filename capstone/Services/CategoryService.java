@@ -17,9 +17,16 @@ public class CategoryService {
         return categories;
     }
 
-    public void addCategory(Category category) {
+    public void addCategory(Category newCategory) {
 
-        categories.add(category);
+        for (Category category : categories) {
+            if(category.getId().equals(newCategory.getId) || category.getName().equals(newCategory.getName())){
+                categories.set(categories.indexOf(category), updatedCategory);
+                return;
+            }
+            }
+        categories.add(newCategory);
+        
 
     }
 
